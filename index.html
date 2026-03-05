@@ -1,212 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Run Free Run Fast | Gen Z Edition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #ff4dff;
-            --secondary: #00f0ff;
-            --accent: #00ff9d;
-            --bg-dark: #0f0c29;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: white;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+<title>Run Free Run Fast</title>
 
-        /* --- HERO SECTION --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 20px 60px;
-            position: relative;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-        }
+<style>
 
-        .hero p {
-            font-size: 1.2rem;
-            color: #ccc;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        /* --- BUTTONS --- */
-        .cta-container {
-            margin-bottom: 50px;
-            z-index: 10; /* Assure que le bouton est au-dessus de tout */
-        }
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+text-align:center;
+}
 
-        .cta {
-            display: inline-block;
-            padding: 20px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
+/* HERO */
 
-        .cta-primary {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-        }
+.hero{
+padding:80px 20px 40px 20px;
+}
 
-        .cta:hover {
-            transform: scale(1.1) translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 77, 255, 0.4);
-        }
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
 
-        /* --- HERO IMAGE (Gen Z Vibe) --- */
-        .hero-image-wrapper {
-            width: 100%;
-            max-width: 900px;
-            margin-top: 20px;
-            perspective: 1000px;
-        }
+background:linear-gradient(90deg,#ff4dff,#00f0ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-        .hero-image-wrapper img {
-            width: 100%;
-            height: auto;
-            border-radius: 30px;
-            /* Image suggérée : Urbaine, dynamique, look rétro-moderne */
-            content: url('https://images.unsplash.com/photo-1596333100105-09088663806d?auto=format&fit=crop&w=1200&q=80');
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-            transform: rotateX(5deg);
-            transition: 0.5s;
-        }
+.hero p{
+font-size:1.2rem;
+color:#ddd;
+margin-bottom:30px;
+}
 
-        .hero-image-wrapper:hover img {
-            transform: rotateX(0deg) scale(1.02);
-        }
+/* BUTTONS */
 
-        /* --- BENEFITS SECTION --- */
-        .benefits {
-            padding: 100px 20px;
-            background: rgba(0,0,0,0.2);
-        }
+.cta{
+display:inline-block;
+padding:16px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
 
-        .benefit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 50px auto 0;
-        }
+.cta-primary{
+background:linear-gradient(90deg,#ff4dff,#00f0ff);
+color:white;
+}
 
-        .card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            padding: 40px 30px;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
+.cta-secondary{
+background:white;
+color:black;
+}
 
-        .card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--secondary);
-        }
+.cta-discount{
+background:#00ff9d;
+color:black;
+}
 
-        .card h3 {
-            margin: 20px 0 10px;
-            color: var(--secondary);
-        }
+.cta:hover{
+transform:scale(1.05);
+}
 
-        /* --- SPECIAL OFFERS --- */
-        .promo-section {
-            padding: 80px 20px;
-            text-align: center;
-        }
+/* HERO IMAGE */
 
-        .cta-discount {
-            background: var(--accent);
-            color: #000;
-            font-size: 1.3rem;
-            border: none;
-        }
+.hero-image{
+margin-top:40px;
+}
 
-        footer {
-            padding: 40px;
-            font-size: 0.9rem;
-            opacity: 0.6;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
+.hero-image img{
+width:90%;
+max-width:700px;
+border-radius:20px;
+}
 
-    </style>
+/* BENEFITS */
+
+.benefits{
+padding:80px 20px;
+}
+
+.benefits h2{
+font-size:2rem;
+margin-bottom:50px;
+}
+
+.benefit-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#ccc;
+}
+
+/* MID CTA */
+
+.mid-cta{
+padding:40px 20px;
+}
+
+/* FINAL CTA */
+
+.final-cta{
+padding:80px 20px;
+}
+
+.final-cta h2{
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:40px;
+padding:20px;
+color:#aaa;
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <section class="hero">
-        <h1>Run Fast.<br>Pay Less.</h1>
-        <p>L'app de running pensée pour ta génération. Des parcours stylés, une communauté solide, et 0€ de frais inutiles.</p>
-        
-        <div class="cta-container">
-            <a href="formulaire.html" class="cta cta-primary">Commencer à courir</a>
-        </div>
 
-        <div class="hero-image-wrapper">
-            <img src="1.jpg" >
-        </div>
-    </section>
+<!-- HERO -->
 
-    <section class="benefits">
-        <h2>Boost ta vibe running</h2>
-        <div class="benefit-grid">
-            <div class="card">
-                <h3>📍 City Maps</h3>
-                <p>Les meilleurs spots pour tes photos et tes records perso.</p>
-            </div>
-            <div class="card">
-                <h3>📊 Stats Intelligentes</h3>
-                <p>Pas besoin d'être un pro pour comprendre tes progrès.</p>
-            </div>
-            <div class="card">
-                <h3>🎧 Community</h3>
-                <p>Trouve ton crew et partage tes meilleurs parcours.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <section class="promo-section">
-        <h2>Prêt à exploser tes scores ?</h2>
-        <div style="margin-top: 30px;">
-            <a href="#" class="cta cta-discount">🔥 -80% SUR LE PASS VIP</a>
-        </div>
-    </section>
+<h1>Cours mieux, sans payer une fortune</h1>
 
-    <footer>
-        © 2026 RUN FREE APP - Design with ❤️ for the next gen
-    </footer>
+<p>Découvre des parcours près de toi et améliore tes performances simplement.</p>
+
+<a href="formulaire.html" class="cta cta-primary">Commencer à courir</a>
+
+<div class="hero-image">
+  <img src="https://images.unsplash.com/photo-1520975918318-3a4e6e791f6b?auto=format&fit=crop&w=1200&q=80" alt="Coureurs en train de courir">
+</div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+<h2>Transforme chaque sortie running en entraînement efficace</h2>
+
+<div class="benefit-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5">
+<h3>Parcours optimisés</h3>
+<p>Accède à des parcours optimisés près de toi.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8">
+<h3>Suis tes performances</h3>
+<p>Analyse tes progrès et améliore tes performances.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502904550040-7534597429ae">
+<h3>Programme personnalisé</h3>
+<p>Reçois des programmes d’entraînement adaptés.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA DISCOVER -->
+
+<section class="mid-cta">
+
+<a href="#" class="cta cta-secondary">Découvrir les parcours</a>
+
+</section>
+
+
+<!-- FINAL OFFER -->
+
+<section class="final-cta">
+
+<h2>Débloque ton potentiel avec l’offre de lancement</h2>
+
+<a href="#" class="cta cta-discount">🔥 Profiter de -80% maintenant</a>
+
+</section>
+
+
+<footer>
+
+© 2026 Running App
+
+</footer>
+
 
 </body>
 </html>
