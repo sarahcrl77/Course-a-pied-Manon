@@ -1,105 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>RunTrack — App Running</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Running App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-background:#0a0a0a;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:white;
-font-family: "Inter", Arial, sans-serif;
+text-align:center;
 }
 
 /* HERO */
 
 .hero{
-min-height:85vh;
-background:
-linear-gradient(135deg,#0a0a0a,#1a0033,#001f3f);
-position:relative;
-display:flex;
-align-items:center;
+padding:80px 20px 40px 20px;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at 20% 30%,rgba(255,0,255,0.25),transparent 40%),
-radial-gradient(circle at 80% 70%,rgba(0,200,255,0.25),transparent 40%);
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+background:linear-gradient(90deg,#ff4dff,#00f0ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
+.hero p{
+font-size:1.2rem;
+color:#ddd;
+margin-bottom:30px;
 }
 
-/* TITRES */
-
-h1,h2,h3{
-letter-spacing:0.5px;
-}
-
-/* COULEUR PRINCIPALE */
-
-.text-primary{
-color:#ff2bd6 !important;
-}
-
-/* BOUTONS */
-
-.btn-primary{
-background:linear-gradient(90deg,#ff2bd6,#6a5cff);
-border:none;
-font-weight:600;
-}
-
-.btn-primary:hover{
-background:linear-gradient(90deg,#ff00cc,#5a47ff);
-transform:translateY(-2px);
-}
-
-.btn-danger{
-background:linear-gradient(90deg,#ff0055,#ff5a00);
-border:none;
+.cta{
+display:inline-block;
+padding:16px 32px;
+border-radius:40px;
+text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
-/* CARDS */
-
-.feature-card{
-background:rgba(255,255,255,0.05);
-border-radius:14px;
-padding:25px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.25s;
+.cta-primary{
+background:linear-gradient(90deg,#ff4dff,#00f0ff);
+color:white;
 }
 
-.feature-card:hover{
-transform:translateY(-6px);
-border-color:#ff2bd6;
-box-shadow:0 10px 30px rgba(255,0,200,0.25);
+.cta-secondary{
+background:white;
+color:black;
 }
 
-.bg-black{
-background:#050505 !important;
+.cta-discount{
+background:#00ff9d;
+color:black;
+}
+
+.cta:hover{
+transform:scale(1.05);
+}
+
+/* IMAGE */
+
+.hero-image{
+margin-top:40px;
+}
+
+.hero-image img{
+width:90%;
+max-width:700px;
+border-radius:20px;
+}
+
+/* BENEFITS */
+
+.benefits{
+padding:80px 20px;
+}
+
+.benefits h2{
+font-size:2rem;
+margin-bottom:50px;
+}
+
+.benefit-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
 }
 
 .card{
-background:#111;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#ccc;
+}
+
+/* CTA MID */
+
+.mid-cta{
+padding:40px 20px;
+}
+
+/* FINAL CTA */
+
+.final-cta{
+padding:80px 20px;
+}
+
+.final-cta h2{
+margin-bottom:30px;
 }
 
 footer{
-background:#000;
+margin-top:40px;
+padding:20px;
+color:#aaa;
 }
 
 </style>
@@ -108,322 +148,78 @@ background:#000;
 
 <body>
 
-<!-- NAVBAR -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
-
-<div class="container">
-
-<a class="navbar-brand fw-bold text-primary" href="#">
-RunTrack
-</a>
-
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse" id="nav">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="#features">Fonctionnalités</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#routes">Parcours</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#cta">Offre</a>
-</li>
-
-</ul>
-
-<a class="btn btn-primary ms-lg-3" href="#cta">
-Télécharger
-</a>
-
-</div>
-
-</div>
-
-</nav>
 
 <!-- HERO -->
 
-<header class="hero">
+<section class="hero">
 
-<div class="container hero-content">
+<h1>Cours mieux, sans payer une fortune</h1>
 
-<div class="row align-items-center">
+<p>Découvre des parcours près de toi et améliore tes performances simplement.</p>
 
-<div class="col-lg-6">
+<a href="#" class="cta cta-primary">Commencer à courir</a>
 
-<span class="badge bg-warning text-dark mb-3">
-
-Offre limitée : Premium -80%
-
-</span>
-
-<h1 class="display-5 fw-bold mb-3">
-
-Cours mieux, sans payer une fortune
-
-</h1>
-
-<p class="lead">
-
-Découvre des parcours près de toi et améliore tes performances simplement.
-
-</p>
-
-<p class="mb-4">
-
-Transforme chaque sortie running en entraînement efficace.
-
-</p>
-
-<div class="d-flex flex-wrap gap-3">
-
-<a class="btn btn-primary btn-lg">
-
-Commencer à courir
-
-</a>
-
-<a class="btn btn-outline-light btn-lg">
-
-Découvrir les parcours
-
-</a>
-
-<a class="btn btn-danger btn-lg">
-
-Profiter de -80% maintenant
-
-</a>
-
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e" alt="Runner">
 </div>
 
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+<h2>Transforme chaque sortie running en entraînement efficace</h2>
+
+<div class="benefit-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5">
+<h3>Parcours optimisés</h3>
+<p>Accède à des parcours optimisés près de toi.</p>
 </div>
 
-<div class="col-lg-6 text-center">
-
-<img
-src="https://images.unsplash.com/photo-1546483875-ad9014c88eba"
-class="img-fluid rounded-4 shadow"
-alt="running app">
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8">
+<h3>Suis tes performances</h3>
+<p>Analyse tes progrès et améliore tes performances.</p>
 </div>
 
-</div>
-
-</div>
-
-</header>
-
-<!-- FEATURES -->
-
-<section id="features" class="py-5">
-
-<div class="container">
-
-<h2 class="text-center fw-bold mb-5">
-
-Ton coach running dans ta poche
-
-</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-
-<div class="feature-card text-center">
-
-<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
-class="img-fluid rounded mb-3">
-
-<h4>Parcours autour de toi</h4>
-
-<p class="text-secondary">
-
-Découvre les meilleurs parcours proches de ta localisation.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="feature-card text-center">
-
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
-class="img-fluid rounded mb-3">
-
-<h4>Suivi des performances</h4>
-
-<p class="text-secondary">
-
-Analyse ta vitesse, ton endurance et tes progrès.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="feature-card text-center">
-
-<img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
-class="img-fluid rounded mb-3">
-
-<h4>Programmes personnalisés</h4>
-
-<p class="text-secondary">
-
-Des entraînements adaptés à ton niveau et tes objectifs.
-
-</p>
-
-</div>
-
-</div>
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502904550040-7534597429ae">
+<h3>Programme personnalisé</h3>
+<p>Reçois des programmes d’entraînement adaptés.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ROUTES -->
 
-<section id="routes" class="py-5 bg-black">
+<!-- CTA DISCOVER -->
 
-<div class="container">
+<section class="mid-cta">
 
-<h2 class="fw-bold mb-4">
-
-Parcours populaires
-
-</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-
-<div class="card border-secondary">
-
-<img src="https://images.unsplash.com/photo-1502904550040-7534597429ae"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Parc Urbain</h5>
-
-<p class="text-secondary">5 km • Niveau facile</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card border-secondary">
-
-<img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Bord de rivière</h5>
-
-<p class="text-secondary">8 km • Endurance</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card border-secondary">
-
-<img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
-class="card-img-top">
-
-<div class="card-body">
-
-<h5>Trail nature</h5>
-
-<p class="text-secondary">12 km • Avancé</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+<a href="#" class="cta cta-secondary">Découvrir les parcours</a>
 
 </section>
 
-<!-- CTA -->
 
-<section id="cta" class="py-5 text-center">
+<!-- FINAL OFFER -->
 
-<div class="container">
+<section class="final-cta">
 
-<h2 class="fw-bold mb-3">
+<h2>Débloque ton potentiel avec l’offre de lancement</h2>
 
-Passe au niveau supérieur
-
-</h2>
-
-<p class="text-secondary mb-4">
-
-Offre de lancement : Premium à -80% jusqu'à après-demain.
-
-</p>
-
-<a class="btn btn-danger btn-lg">
-
-Profiter de -80% maintenant
-
-</a>
-
-</div>
+<a href="#" class="cta cta-discount">🔥 Profiter de -80% maintenant</a>
 
 </section>
 
-<!-- FOOTER -->
 
-<footer class="py-4 border-top border-secondary">
-
-<div class="container text-center">
-
-<p class="text-secondary mb-0">
-
-© 2026 RunTrack — Application Running
-
-</p>
-
-</div>
-
+<footer>
+© 2026 Running App
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
