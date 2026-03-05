@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App Running</title>
+<title>Running App</title>
 
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family: Arial, sans-serif;
 margin:0;
-background:#f5f5f5;
+background:#f4f4f4;
 color:#333;
 text-align:center;
 }
@@ -22,13 +23,12 @@ padding:60px 20px;
 }
 
 h1{
-font-size:40px;
+font-size:38px;
 margin-bottom:10px;
 }
 
 .subtitle{
 font-size:20px;
-opacity:0.9;
 }
 
 .container{
@@ -39,15 +39,14 @@ padding:40px 20px;
 
 .promise{
 font-size:24px;
-margin-bottom:30px;
 font-weight:bold;
+margin-bottom:30px;
 }
 
 .benefits{
 display:flex;
 flex-direction:column;
 gap:15px;
-font-size:18px;
 margin-bottom:40px;
 }
 
@@ -55,31 +54,31 @@ margin-bottom:40px;
 background:white;
 padding:15px;
 border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-.cta-container{
+.buttons{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
 gap:15px;
+flex-wrap:wrap;
 }
 
 button{
 padding:15px 25px;
+font-size:16px;
 border:none;
 border-radius:8px;
-font-size:16px;
 cursor:pointer;
 }
 
-.primary{
-background:#2ecc71;
+.start{
+background:#27ae60;
 color:white;
 }
 
-.secondary{
-background:#3498db;
+.discover{
+background:#2980b9;
 color:white;
 }
 
@@ -92,18 +91,23 @@ font-weight:bold;
 footer{
 margin-top:60px;
 padding:20px;
-font-size:14px;
 color:#777;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Cours mieux, sans payer une fortune</h1>
-<p class="subtitle">Découvre des parcours près de toi et améliore tes performances simplement.</p>
+
+<p class="subtitle">
+Découvre des parcours près de toi et améliore tes performances simplement.
+</p>
+
 </header>
 
 <section class="container">
@@ -128,13 +132,13 @@ Reçois des programmes d’entraînement adaptés
 
 </div>
 
-<div class="cta-container">
+<div class="buttons">
 
-<button class="primary">
+<button class="start">
 Commencer à courir
 </button>
 
-<button class="secondary">
+<button class="discover">
 Découvrir les parcours
 </button>
 
@@ -147,8 +151,11 @@ Profiter de -80% maintenant
 </section>
 
 <footer>
+
 Offre de lancement : -80% sur le Premium jusqu’à après-demain.
+
 </footer>
 
 </body>
+
 </html>
