@@ -1,200 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RunBoost – App Running</title>
 
-<title>Running App</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+/* STYLE GLOBAL */
 
 body{
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+background:#0f0f10;
 color:white;
-text-align:center;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 /* HERO */
 
 .hero{
-padding:80px 20px 40px 20px;
+min-height:90vh;
+display:flex;
+align-items:center;
+padding-top:60px;
+padding-bottom:60px;
+background:linear-gradient(140deg,#0f0f10,#18181b);
 }
+
+/* TITRE */
 
 .hero h1{
+font-weight:800;
 font-size:3rem;
-margin-bottom:20px;
-
-background:linear-gradient(90deg,#ff4dff,#00f0ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
 }
+
+/* SOUS TITRE */
 
 .hero p{
-font-size:1.2rem;
-color:#ddd;
-margin-bottom:30px;
+color:#b3b3b3;
+font-size:1.1rem;
 }
 
-/* BUTTONS */
+/* BOUTONS */
 
-.cta{
-display:inline-block;
-padding:16px 32px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+.btn-primary{
+background:#ccff00;
+border:none;
+color:black;
+font-weight:700;
 }
 
-.cta-primary{
-background:linear-gradient(90deg,#ff4dff,#00f0ff);
-color:white;
-}
-
-.cta-secondary{
-background:white;
+.btn-primary:hover{
+background:#b3e600;
 color:black;
 }
 
-.cta-discount{
-background:#00ff9d;
-color:black;
+.btn-outline-light{
+border:1px solid #444;
 }
 
-.cta:hover{
-transform:scale(1.05);
-}
-
-/* HERO IMAGE */
+/* IMAGE HERO */
 
 .hero-image{
 margin-top:40px;
+text-align:center;
 }
 
 .hero-image img{
-width:90%;
-max-width:700px;
+width:100%;
+max-width:600px;
 border-radius:20px;
 }
 
 /* BENEFITS */
 
-.benefits{
-padding:80px 20px;
-}
-
-.benefits h2{
-font-size:2rem;
-margin-bottom:50px;
-}
-
-.benefit-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-max-width:1000px;
-margin:auto;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
+.benefit-card{
+background:#1a1a1d;
+border-radius:16px;
 padding:25px;
-border-radius:20px;
+height:100%;
 }
 
-.card img{
-width:100%;
-border-radius:15px;
-margin-bottom:15px;
-}
+/* SECTION */
 
-.card p{
-color:#ccc;
-}
-
-/* MID CTA */
-
-.mid-cta{
-padding:40px 20px;
-}
-
-/* FINAL CTA */
-
-.final-cta{
-padding:80px 20px;
-}
-
-.final-cta h2{
-margin-bottom:30px;
-}
-
-/* FOOTER */
-
-footer{
-margin-top:40px;
-padding:20px;
-color:#aaa;
+section{
+padding:80px 0;
 }
 
 </style>
 
 </head>
 
+
 <body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-dark bg-black border-bottom border-secondary">
+<div class="container">
+<a class="navbar-brand fw-bold">RunBoost</a>
+
+<div>
+<a class="btn btn-primary">Télécharger l'app</a>
+</div>
+
+</div>
+</nav>
 
 
 <!-- HERO -->
 
 <section class="hero">
 
-<h1>Cours mieux, sans payer une fortune</h1>
+<div class="container">
 
-<p>Découvre des parcours près de toi et améliore tes performances simplement.</p>
+<div class="row align-items-center">
 
-<a href="#" class="cta cta-primary">Commencer à courir</a>
+<div class="col-lg-6">
+
+<span class="badge bg-warning text-dark mb-3">
+🔥 -80% Premium jusqu'à après-demain
+</span>
+
+<h1>
+Cours mieux, sans payer une fortune
+</h1>
+
+<p class="mt-3">
+Découvre des parcours près de toi et améliore tes performances simplement.
+</p>
+
+<div class="mt-4 d-flex flex-wrap gap-3">
+
+<a class="btn btn-primary btn-lg">
+Commencer à courir
+</a>
+
+<a class="btn btn-outline-light btn-lg">
+Découvrir les parcours
+</a>
+
+<a class="btn btn-success btn-lg">
+Profiter de -80%
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
 
 <div class="hero-image">
+
 <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Couple running fitness">
+
 </div>
 
-</section>
-
-
-<!-- BENEFITS -->
-
-<section class="benefits">
-
-<h2>Transforme chaque sortie running en entraînement efficace</h2>
-
-<div class="benefit-grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5">
-<h3>Parcours optimisés</h3>
-<p>Accède à des parcours optimisés près de toi.</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8">
-<h3>Suis tes performances</h3>
-<p>Analyse tes progrès et améliore tes performances.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1502904550040-7534597429ae">
-<h3>Programme personnalisé</h3>
-<p>Reçois des programmes d’entraînement adaptés.</p>
 </div>
 
 </div>
@@ -202,32 +168,108 @@ color:#aaa;
 </section>
 
 
-<!-- CTA DISCOVER -->
+<!-- BENEFICES -->
 
-<section class="mid-cta">
+<section>
 
-<a href="#" class="cta cta-secondary">Découvrir les parcours</a>
+<div class="container">
+
+<div class="row text-center mb-5">
+
+<h2 class="fw-bold">
+Pourquoi utiliser RunBoost ?
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="benefit-card">
+
+<h5>📍 Parcours proches</h5>
+
+<p>
+Découvre les meilleurs parcours de course autour de toi grâce à la localisation.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="benefit-card">
+
+<h5>📈 Suivi des performances</h5>
+
+<p>
+Analyse tes progrès et améliore ta vitesse ou ton endurance.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="benefit-card">
+
+<h5>🏃 Programmes personnalisés</h5>
+
+<p>
+Des entraînements adaptés à ton niveau et tes objectifs.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FINAL OFFER -->
+<!-- CTA FINAL -->
 
-<section class="final-cta">
+<section class="text-center">
 
-<h2>Débloque ton potentiel avec l’offre de lancement</h2>
+<div class="container">
 
-<a href="#" class="cta cta-discount">🔥 Profiter de -80% maintenant</a>
+<h2 class="fw-bold mb-4">
+Transforme chaque sortie running en entraînement efficace
+</h2>
+
+<p class="mb-4 text-secondary">
+Télécharge l'application et trouve ton prochain parcours dès aujourd'hui.
+</p>
+
+<a class="btn btn-primary btn-lg">
+Télécharger l'application
+</a>
+
+</div>
 
 </section>
 
 
-<footer>
+<!-- FOOTER -->
 
-© 2026 Running App
+<footer class="text-center border-top border-secondary py-4">
+
+<p class="text-secondary mb-0">
+© 2026 RunBoost – Running App
+</p>
 
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
