@@ -1,97 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Running App</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>RunTrack — Application Running</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f4f4;
-color:#333;
-text-align:center;
-}
-
-header{
 background:#111;
 color:white;
-padding:60px 20px;
 }
 
-h1{
-font-size:38px;
-margin-bottom:10px;
+.hero{
+min-height:80vh;
+background-image:url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5");
+background-size:cover;
+background-position:center;
+position:relative;
 }
 
-.subtitle{
-font-size:20px;
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
+.hero-content{
+position:relative;
+z-index:2;
 }
 
-.promise{
-font-size:24px;
-font-weight:bold;
-margin-bottom:30px;
-}
-
-.benefits{
-display:flex;
-flex-direction:column;
-gap:15px;
-margin-bottom:40px;
-}
-
-.benefit{
-background:white;
-padding:15px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-button{
-padding:15px 25px;
-font-size:16px;
+.btn-primary{
+background:#39FF14;
 border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-.start{
-background:#27ae60;
-color:white;
-}
-
-.discover{
-background:#2980b9;
-color:white;
-}
-
-.promo{
-background:#e74c3c;
-color:white;
+color:black;
 font-weight:bold;
 }
 
-footer{
-margin-top:60px;
-padding:20px;
-color:#777;
+.btn-primary:hover{
+background:#2ee312;
+}
+
+.text-primary{
+color:#39FF14 !important;
+}
+
+.feature-card{
+background:#1c1c1c;
+border-radius:10px;
+padding:25px;
+border:1px solid #333;
 }
 
 </style>
@@ -100,62 +66,283 @@ color:#777;
 
 <body>
 
-<header>
+<!-- NAVBAR -->
 
-<h1>Cours mieux, sans payer une fortune</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
 
-<p class="subtitle">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">RunTrack</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#concept">Concept</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#benefits">Bénéfices</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#faq">FAQ</a>
+</li>
+
+</ul>
+
+<a class="btn btn-primary ms-lg-3" href="#cta">
+Télécharger l'app
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<header class="hero d-flex align-items-center">
+
+<div class="container hero-content py-5">
+
+<div class="row align-items-center">
+
+<div class="col-lg-7">
+
+<span class="badge bg-warning text-dark mb-3">
+Offre limitée : -80% sur le Premium
+</span>
+
+<h1 class="display-5 fw-bold mb-3">
+
+Cours mieux, sans payer une fortune
+
+</h1>
+
+<p class="lead">
+
 Découvre des parcours près de toi et améliore tes performances simplement.
+
 </p>
+
+<p class="fs-5 mb-4">
+
+Transforme chaque sortie running en entraînement efficace.
+
+</p>
+
+<div class="d-flex flex-wrap gap-2">
+
+<a class="btn btn-primary btn-lg" href="#cta">
+
+Commencer à courir
+
+</a>
+
+<a class="btn btn-outline-light btn-lg" href="#benefits">
+
+Découvrir les parcours
+
+</a>
+
+<a class="btn btn-danger btn-lg" href="#cta">
+
+Profiter de -80% maintenant
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </header>
 
-<section class="container">
+<!-- CONCEPT -->
 
-<p class="promise">
-Transforme chaque sortie running en entraînement efficace.
+<section id="concept" class="py-5">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="feature-card">
+
+<h3 class="h5">Parcours autour de toi</h3>
+
+<p class="text-secondary">
+
+Trouve instantanément des parcours de course adaptés près de ta localisation.
+
 </p>
 
-<div class="benefits">
-
-<div class="benefit">
-Accède à des parcours optimisés près de toi
-</div>
-
-<div class="benefit">
-Suis tes progrès et tes performances
-</div>
-
-<div class="benefit">
-Reçois des programmes d’entraînement adaptés
 </div>
 
 </div>
 
-<div class="buttons">
+<div class="col-lg-4">
 
-<button class="start">
-Commencer à courir
-</button>
+<div class="feature-card">
 
-<button class="discover">
-Découvrir les parcours
-</button>
+<h3 class="h5">Suivi des performances</h3>
 
-<button class="promo">
-Profiter de -80% maintenant
-</button>
+<p class="text-secondary">
+
+Analyse tes progrès et améliore ton endurance à chaque sortie.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="feature-card">
+
+<h3 class="h5">Programmes personnalisés</h3>
+
+<p class="text-secondary">
+
+Des conseils et entraînements adaptés à ton niveau et tes objectifs.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<footer>
+<!-- BENEFITS -->
 
-Offre de lancement : -80% sur le Premium jusqu’à après-demain.
+<section id="benefits" class="py-5 bg-black">
+
+<div class="container">
+
+<h2 class="h3 fw-bold mb-4">
+
+Pourquoi utiliser RunTrack ?
+
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<h4>Parcours optimisés</h4>
+
+<p class="text-secondary">
+
+Accède à des parcours optimisés près de toi.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<h4>Suivi des performances</h4>
+
+<p class="text-secondary">
+
+Suis tes progrès et tes performances en temps réel.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<h4>Objectifs personnalisés</h4>
+
+<p class="text-secondary">
+
+Reçois des programmes d'entraînement adaptés.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA FINAL -->
+
+<section id="cta" class="py-5 text-center">
+
+<div class="container">
+
+<h2 class="fw-bold mb-3">
+
+Passe au niveau supérieur
+
+</h2>
+
+<p class="text-secondary mb-4">
+
+Offre de lancement : Premium à -80% jusqu'à après-demain.
+
+</p>
+
+<a class="btn btn-danger btn-lg">
+
+Profiter de -80% maintenant
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="py-4 border-top border-secondary">
+
+<div class="container text-center">
+
+<p class="text-secondary mb-0">
+
+© 2026 RunTrack — Application Running
+
+</p>
+
+</div>
 
 </footer>
 
-</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+</body>
 </html>
